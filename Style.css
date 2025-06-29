@@ -391,3 +391,70 @@ padding: 0 12px;
         height: 38px;
     }
 }
+.experience-section {
+  margin: 40px auto;
+  max-width: 900px;
+  background: #f7f7fb;
+  border-radius: 10px;
+  padding: 32px 24px;
+}
+
+.experience-row {
+  display: flex;
+  gap: 32px;
+}
+
+.experience-left {
+  flex: 1;
+  min-width: 180px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.company-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.company-duration {
+  font-size: 1rem;
+  color: #666;
+}
+
+.experience-right {
+  flex: 2.5;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.job-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 2px;
+  color: #222;
+}
+
+.job-desc {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 700px) {
+  .experience-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .experience-section {
+    padding: 18px 8px;
+  }
+}
+.centered-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}

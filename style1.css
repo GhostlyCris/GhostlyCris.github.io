@@ -176,3 +176,22 @@ input[type="range"] {
         flex-direction: column;
     }
 }
+nav {
+  border: 2px solid #007bff; /* blue border around */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  background-color: #1098f3;
+} 
+ nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #007bff;
+}
