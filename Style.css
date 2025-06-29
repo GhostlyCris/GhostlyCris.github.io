@@ -442,7 +442,12 @@ padding: 0 12px;
   color: #444;
   margin-bottom: 10px;
 }
-
+.centered-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 @media (max-width: 700px) {
   .experience-row {
     flex-direction: column;
@@ -451,10 +456,4 @@ padding: 0 12px;
   .experience-section {
     padding: 18px 8px;
   }
-}
-.centered-heading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
 }
