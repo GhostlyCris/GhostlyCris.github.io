@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html><!-- Created by Cristian Zaragoza -->
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cristian Zaragoza | Software Engineer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+      <style>
+    /* Reset default margin/padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #121212;
+      color: white;
+    }
+    nav {
+      border: 2px solid #007bff; /* blue border around */
+      padding: 10px 20px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 20px;
+      background-color: #000;
+    } 
+     nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #007bff;
+    }
+    .btn-contact {
+      border: 1.8px solid white;
+      padding: 6px 14px;
+      border-radius: 20px;
+      background-color: black;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+    .btn-contact:hover {
+      background-color: #007bff;
+      border-color: #007bff;
+      color: white;
+    }
+    .hero-section {
+        display: flex;
+        min-height: 80vh;
+        width: 100vw;
+        position: relative;
+    }
+    .hero-left {
+        background: #d1cccc;
+        flex: 1.1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+        min-width: 0;
+    }
+    .hero-right {
+        background: #000;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        min-width: 0;
+    }
+    .hero-content {
+        max-width: 420px;
+        margin-left: 40px;
+    }
+    .hero-logo {
+        width: 96px;
+        margin-bottom: 32px;
+    }
+    .hero-hi {
+        font-size: 1.5rem;
+        color: #222;
+        margin-bottom: 0.5rem;
+    }
+    .hero-name {
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: #111;
+        margin-bottom: 0.5rem;
+    }
+    .hero-title {
+        font-size: 1.1rem;
+        color: #888;
+        font-weight: 600;
+        margin-bottom: 2rem;
+    }
+    .hero-socials a {
+        display: inline-block;
+        margin-right: 18px;
+        font-size: 1.7rem;
+        color: #222;
+        background: #eee;
+        border-radius: 6px;
+        padding: 8px 12px;
+        transition: background 0.2s;
+    }
+    .hero-socials a:hover {
+        background: #bbb;
+        color: #000;
+    }
+    .hero-photo {
+        width: 320px;
+        border-radius: 8px;
+        margin-top: 40px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    }
+    .hero-caption {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #fff;
+        font-size: 0.95rem;
+        opacity: 0.7;
+        text-align: center;
+        width: 80%;
+    }
+    .it-berries-section {
+    position: relative;
+    background: #1a1a1a;
+    color: #fff;
+    padding: 48px 0 36px 0;
+    overflow: hidden;
+    border-top: 2px solid #ccc;
+}
+
+.it-berries-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 2;
+}
+
+.it-berries-section h2 {
+    letter-spacing: 3px;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.it-berries-section p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 32px;
+}
+
+.read-more-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    padding: 0 0 0 0;
+    position: relative;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.read-more-btn::after {
+    content: "";
+    display: inline-block;
+    margin-left: 18px;
+    vertical-align: middle;
+    border-left: 2px solid #fff;
+    height: 18px;
+}
+
+.read-more-btn:hover {
+    color: #007bff;
+}
+
+.it-berries-bg-text {
+    position: absolute;
+    right: 0;
+    bottom: -30px;
+    font-size: 10rem;
+    color: #7171e9;
+    font-weight: 900;
+    opacity: 0.25;
+    z-index: 1;
+    pointer-events: none;
+    user-select: none;
+    line-height: 1;
+    transform: rotate(-22deg);
+}
+
+@media (max-width: 700px) {
+    .it-berries-bg-text {
+        font-size: 4.5rem;
+        bottom: 0;
+    }
+    .it-berries-content {
+        padding: 0 12px;
+    }
+}
+    @media (max-width: 900px) {
+        .hero-section {
+            flex-direction: column;
+        }
+        .hero-left, .hero-right {
+            clip-path: none;
+            width: 100%;
+            min-height: 300px;
+        }
+        .hero-content {
+            margin-left: 0;
+            margin-top: 40px;
+        }
+    }
+  </style>
+
+</head>
+<body>
+    <nav>
+        <a href="About-me.html">About me</a>
+        <a href="Skills.html">Skills</a>
+        <a href="Projects.html">Projects</a>
+        <a href="Contact.html" class="btn-contact">Contact me</a>
+     </nav>
+
+    <div class="hero-section">
+        <div class="hero-left">
+            <div class="hero-content">
+                <img src="cz.png" alt="Logo" class="hero-logo" />
+                <p class="hero-hi">Hi, I am</p>
+                <h1 class="hero-name">Cristian Zaragoza</h1>
+                <p class="hero-title">Front-end Developer / Software developer</p>
+                <div class="hero-socials">
+                    <a href="#"><i class="bi bi-at"></i>Ghostlycris</a>
+                    <a href="https://github.com/Ghostlycris" target="_blank"><i class="bi bi-github"></i></a>
+                    <a href="https://linkedin.com/in/cristian-z-769361165" target="_blank"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-right">
+            <img src="your-photo.jpg" alt="Cristian Zaragoza" class="hero-photo" />
+            <span class="hero-caption"><br>I dearly hope to get one photo to upload</span>
+        </div>
+    </div>
+    <div class="it-berries-section">
+        <div class="it-berries-content">
+            <h2>Little Background</h2>
+            <div class = "it-berries-section p">
+            <p>Hi, I'm a graduate from the University of Toledo. I studied Computer Science Engineering Technologies as my major and 
+                went with business as a minor. I have been learning Full-stack technologies for a  bit over a year and this is a 
+                potential place in the industry that I'd like to work in if not as a software architect or data science technician.
+I started my journey back at Terra Community College learning C# as an introduction into the field. I developed my further skills at
+ UT and continue to do so outside of school. I am fluent in English (spoken and written) and intermediate Spanish and Japanese. Apart from programming websites and software, I play games,
+ workout so I can eat, and try to dabble more in art so I can make things for my personal use (ex: Emotes for Twitch).
+</p>
+        </div>
+            <button class="read-more-btn" ><a href = "About-me.html" >  Read more</button>
+            <span class="it-berries-bg-text">IT</span>
+        </div>
+        </div>
+
+    
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
+</body>
+</html>
